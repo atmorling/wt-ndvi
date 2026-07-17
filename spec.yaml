@@ -179,7 +179,7 @@ workflow:
           argvalues: ${{ workflow.split_roi_groups.return }}
       - name: ""
         id: base_maps
-        task: set_base_maps_pydeck
+        task: set_base_maps
   - name: Create ROI Boundary Layer
     id: roi_boundary_layer
     task: create_polygon_layer_pydeck
@@ -198,6 +198,7 @@ workflow:
         line_width_units: pixels
       legend: null
       data_url: null
+      tooltip_columns: []
     mapvalues:
       argnames: geodataframe
       argvalues: ${{ workflow.split_roi_groups.return }}
@@ -225,6 +226,7 @@ workflow:
       legend_style: null
       max_zoom: 20
       view_state: null
+      output_type: html
     mapvalues:
       argnames: [geo_layers, tile_layers]
       argvalues: ${{ workflow.ndvi_map_layers.return }}
