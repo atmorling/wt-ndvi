@@ -58,6 +58,9 @@ workflow:
   - name: Select Google Earth Engine Data Source
     id: gee_client
     task: set_gee_connection
+  - name: Data Source
+    id: er_client_name
+    task: set_er_connection
   - name: Time Range
     id: time_range
     task: set_time_range
