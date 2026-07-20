@@ -104,6 +104,9 @@
             },
             {
               "$ref": "#/$defs/RemoteFileSpatialFeatures"
+            },
+            {
+              "$ref": "#/$defs/EarthRangerSpatialFeatures"
             }
           ],
           "title": "Spatial Feature Data Source"
